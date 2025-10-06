@@ -1,0 +1,22 @@
+type: object
+properties:
+  id:
+    type: integer
+    example: 1
+  nombre:
+    type: string
+    example: "Drakemoor"
+  poblacion:
+    type: integer
+    example: 23000
+  raza:
+    type: string
+    example: "Elfos sombríos"
+  emblema:
+    type: string
+    format: uri
+    example: "https://placehold.co/200x200"
+required:
+  - nombre
+  - poblacion
+  - raza

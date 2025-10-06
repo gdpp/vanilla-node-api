@@ -1,0 +1,18 @@
+openapi: 3.0.3
+info:
+  title: Fantasy Dark Lands API
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:4010
+
+paths:
+  /cities:
+    $ref: "./paths/cities.yaml#/cities"
+  /cities/{id}:
+    $ref: "./paths/cities.yaml#/cityById"
+
+components:
+  schemas:
+    City:
+      $ref: "./components/schemas/City.yaml"

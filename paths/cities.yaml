@@ -1,0 +1,78 @@
+cities:
+  get:
+    summary: Get all cities
+    responses:
+      "200":
+        description: List of cities
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "../components/schemas/City.yaml"
+  post:
+    summary: Create a new city
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas/City.yaml"
+    responses:
+      "201":
+        description: City created
+        content:
+          application/json:
+            schema:
+              $ref: "../components/schemas/City.yaml"
+
+cityById:
+  get:
+    summary: Get city by ID
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+    responses:
+      "200":
+        description: A single city
+        content:
+          application/json:
+            schema:
+              $ref: "../components/schemas/City.yaml"
+      "404":
+        description: City not found
+  put:
+    summary: Update a city by ID
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas/City.yaml"
+    responses:
+      "200":
+        description: City updated
+        content:
+          application/json:
+            schema:
+              $ref: "../components/schemas/City.yaml"
+  delete:
+    summary: Delete a city by ID
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+    responses:
+      "204":
+        description: City deleted

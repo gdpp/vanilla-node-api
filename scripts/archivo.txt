@@ -1,0 +1,13 @@
+Hello
+Text
+Hi
+Im
+Faker
+Gosu
+Dopa
+Apdo
+Javascript
+Node
+Rust
+Ruby
+Python
